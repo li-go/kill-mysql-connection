@@ -13,4 +13,29 @@ $ go get -u github.com/li-go/kill-mysql-connection
 
 ```
 $ kill-mysql-connection -h
+Usage of kill-mysql-connection:
+  -config string
+        config file in toml format
+  -max-time int
+        kill process lives longer than max-time seconds (default 100)
+```
+
+### Config (in toml format)
+
+```
+[mysql]
+  host = ""
+  port = 3306
+  username = ""
+  password = ""
+
+[ssh_tunnel]
+  use_tunnel = false
+  host = ""
+  port = 22
+  username = ""
+  password = ""
+
+  private_key = ""
+  key_passphrase = ""
 ```
